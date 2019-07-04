@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+:root {
+  --main-bg: radial-gradient(ellipse farthest-side at top, hsl(186, 100%, 45%), hsl(191, 55%, 30%));
+  --light-bg: radial-gradient(ellipse farthest-corner at bottom, hsl(0, 0%, 80%), hsl(213, 4%, 42%));
+  --dark-bg: radial-gradient(ellipse farthest-corner at bottom, hsl(0, 0%, 35%), hsl(213, 5%, 12%));
+  --text-light: #fff;
+  --text-dark: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1.6;
+  /* font-family: 'Varela Round', sans-serif; */
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  scroll-behavior: smooth;
+  background-color: #333;
+}
+
+a {
+  cursor: pointer;
+  display: inline-block;
+}
+
+a:link {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.brand {
+  width: 100%;
+  top: 25%;
+}
+
+/* Section Styles */
+#filler {
+  display: none;
+  height: 4em;
+}
+
+section {
+  height: 45em;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+section h2 {
+  padding-top: 3em;
+  text-align: center;
+  text-shadow: 1px 1px 3px var(--text-dark);
+}
+
+#home3 h2 {
+  text-shadow: 1px 1px 3px var(--text-light);
+}
+
+.main-bg {
+  background: var(--main-bg);
+}
+
+.dark-bg {
+  background: var(--dark-bg);
+}
+
+.light-bg {
+  background: var(--light-bg);
+}
+
+/* Footer */
+footer {
+  height: 8em;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+footer .container {
+  width: 100%;
+  padding: 0 3em;
+  display: flex;
+  font-size: .7rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#footer-nav {
+  box-shadow: none;
+  background: transparent;
+}
+
+#footer-nav ul {
+  padding: 0;
+}
+
+.copyrights {
+  float: right;
+  margin: auto;
+  padding-right: 3em;
+  color: white;
+  width: 70%;
+  text-align: right;
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+  body {
+    font-size: 75%;
+  }
+}

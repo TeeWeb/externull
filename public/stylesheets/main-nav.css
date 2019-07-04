@@ -1,0 +1,58 @@
+/* Main Navigation */
+.nav-wrapper {
+  height: 4em;
+}
+
+nav {
+  background: #333333;
+  color: #fff;
+  box-shadow: 0px 3px 10px 0px #333;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav .container {
+  display: flex;
+  height: 4em;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.sticky .container {
+  padding: 0;
+}
+
+#main-nav .container ul.nav-items {
+  margin: auto;
+  padding: 1em 0;
+  text-align: center;
+  float: right;
+  display: flex;
+}
+
+li.nav-item {
+  display: inline-flex;
+  margin: 0 1em;
+}
+
+.nav-item a:hover {
+  color: #03CBE4;
+}
+
+nav .logo {
+  display: block;
+}
+
+nav .brand img {
+  display: inline-flex;
+  position: relative;
+  max-height: 3.5em;
+  margin: auto;
+  vertical-align: bottom;
+}

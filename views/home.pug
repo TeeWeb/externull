@@ -1,0 +1,29 @@
+extends layout
+
+append styles
+  link(rel='stylesheet', href='/stylesheets/home.css')
+
+block header
+  header
+    include includes/home-header
+  include includes/main-nav
+
+block content
+  section.container#home1
+    h2 Working to bring your ideas to life
+  section.container.main-bg#home2
+    #text-area
+      h2 Externull is a creative endeavor specializing in web development and original audio content.
+      .slide#ta-1
+        p Have a project that needs:
+        ul
+          li website design/development?
+          li content management?
+          li unique sounds or music?
+      .slide#ta-2
+        p Reach out for a free consultation and find out how we can help, and let you focus on what you do best.
+  section.container#home3
+    h2 Collaborative development, assisting in meeting your goals
+
+append scripts
+  script(src='/javascripts/script.js')
