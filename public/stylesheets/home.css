@@ -53,6 +53,7 @@
   transform: rotate(30deg) translateY(-50%);
   height: 200%;
   transform-origin: top;
+  z-index: -5;
 }
 
 .top {
@@ -128,11 +129,9 @@
   background-image: url('../images/bulb-close-up-dark-296322.jpg');
   background-size: cover;
   background-position: bottom;
-  background-attachment: fixed;
 }
 
-#home2 {
-  justify-content: space-between;
+#portfolio {
   background:
     linear-gradient(to right, hsla(191, 55%, 30%, 1), hsla(186, 100%, 45%, 1) 50%,
       hsla(186, 100%, 45%, 0)),
@@ -140,46 +139,42 @@
   background-repeat: no-repeat;
   background-position: right 25%;
   display: flex;
-  justify-content: start;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
 }
 
-#text-area {
-  max-width: 50%;
+#portfolio h1 {
+  width: 100%;
+}
+
+#portfolio-wrapper {
+  margin: 3em 0;
   display: flex;
   flex-flow: row wrap;
-  margin-left: 5%;
+  justify-content: space-between;
+  max-width: 80%;
 }
 
-#ta-1 {
-  margin: 0 auto;
+.portfolio-item-hero {
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px black;
+  background-position: top;
+  background-size: cover;
+  text-shadow: 1px 1px 3px #fff;
+  color: #000;
+  height: 10em;
 }
 
-#ta-1 ul {
-  list-style-type: none;
-  padding: 0;
+.portfolio-item {
+  margin: 0 1em;
+  width: 40%;
 }
 
-#ta-2 {
-  display: block;
-  text-align: center;
-  margin: auto;
-}
-
-.slide {
-  left: -100px;
-  -webkit-animation: slide 0.5s forwards;
-  -webkit-animation-delay: 2s;
-  animation: slide 0.5s forwards;
-  animation-delay: 2s;
-}
-
-#home2 #image-area {
-  float: right;
-}
-
-#home2 img {
-  max-height: 45em;
-  margin: auto;
+.portfolio-item h3,
+.portfolio-item p {
+  margin: 0;
 }
 
 #home3 {
@@ -189,6 +184,71 @@
   text-shadow: 1px 1px 3px var(--text-light);
   background-position: bottom;
   background-attachment: fixed;
+}
+
+#about {
+  background: url("../images/watercolor-texture.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #000;
+  text-shadow: 1px 1px 2px #fff;
+  padding-bottom: 2em;
+}
+
+#about .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#about p {
+  font-weight: bold;
+}
+
+#about .container img {
+  border: 2px solid #ddd;
+  box-shadow: 1px 1px 5px #333;
+  border-radius: 2px;
+}
+
+#contact {
+  min-height: 20em;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+#contact label {
+  text-align: right;
+  width: 10%;
+}
+
+#contact input,
+textarea {
+  margin: 1em;
+  width: 25%;
+}
+
+.form-item {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit-button {
+  max-width: 50%;
+}
+
+textarea:focus, 
+input:focus {
+  border: 2px solid #009;
 }
 
 @-webkit-keyframes slide {
@@ -201,4 +261,75 @@
   100% {
     left: 0;
   }
+}
+
+/* Media Queries */
+@media(min-width: 768px) {
+  #home {
+    background-attachment: fixed;
+  }
+
+  #headshot {
+    max-width: 25%;
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  header,
+  .layer,
+  .handle, 
+  .scroll-arrow {
+    display: none;
+  }
+
+  #portfolio {
+    background:
+    linear-gradient(to bottom right, hsla(191, 55%, 30%, 1), hsla(186, 100%, 45%, 1) 50%,
+      hsla(186, 100%, 45%, 0));
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #portfolio-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    min-width: 50%;
+    max-width: 90%
+  }
+
+  .portfolio-item {
+    min-height: 10em;
+    display: block;
+    margin: 0.5em 0;
+    width: 100%;
+  }
+
+  .nav-wrapper#main-nav {
+    top: 0;
+  }
+
+  li.nav-item {
+    margin: 0 0.5em;
+  }
+
+  #headshot {
+    max-width: 75%;
+  }
+
+  .form-item label {
+    margin-right: 2em;
+  }
+
+  #contact input,
+  #contact textarea {
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 300px) {
+  /* Need to shrink main-nav into a hamburger menu */
 }

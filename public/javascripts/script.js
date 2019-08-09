@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Sticky Header
   window.onscroll = function () {
-    console.log("Window Scroll Position: " + window.scrollY + " | StickyLoc: " + stickyLoc);
     makeHeaderSticky()
   };
 

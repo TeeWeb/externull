@@ -11,19 +11,39 @@ block header
 block content
   section.container#home1
     h2 Working to bring your ideas to life
-  section.container.main-bg#home2
-    #text-area
-      h2 Externull is a creative endeavor specializing in web development and original audio content.
-      .slide#ta-1
-        p Have a project that needs:
-        ul
-          li website design/development?
-          li content management?
-          li unique sounds or music?
-      .slide#ta-2
-        p Reach out for a free consultation and find out how we can help, and let you focus on what you do best.
+  section.container#portfolio
+    h1 Portfolio
+    .container#portfolio-wrapper
+      a(href="https://brodienation.com").container.portfolio-item
+        div(style="background-image: url(./images/BN.jpg").portfolio-item-hero
+        h3 BrodieNation.com
+        p.portfolio-item-desc Music Festival
+      a(href="https://100milesofmusic.com").container.portfolio-item 
+        div(style="background-image: url(./images/100mm.jpg").portfolio-item-hero 
+        h3 100MilesofMusic.com
+        p.portfolio-item-desc Music/Lifestyle Blog
+      a(href="http://smithmediaart.com").container.portfolio-item 
+        div(style="background-image: url(./images/SMA.png").portfolio-item-hero 
+        h3 SmithMediaArt.com
+        p.portfolio-item-desc Photography
+      a(href="https://northernshakedown.com").container.portfolio-item 
+        div(style="background-image: url(./images/NS.jpg").portfolio-item-hero 
+        h3 Northern Shakedown
+        p.portfolio-item-desc Band Management &amp; Website
   section.container#home3
-    h2 Collaborative development, assisting in meeting your goals
+    h2 Collaborative development to assist in meeting your goals
+  section.container#about
+    h1 About
+    .container
+      p Something out of nothing. The ability to create interesting, helpful, or entertaining experiences out of practically nothing is what drives the concept behind Externull.
+      p Externull is a creative endeavor that's grown out of somewhat of a personal project of mine, as both a musician and a lover of technology. It's the confluence of two pursuits, when the band I was a part of (and still am) found ourselves in need of a website. This kickstarted my journey into web development, in addition to various musical projects.
+      p - Tyler Weber
+    img(src="./images/tw.jpg" alt="tyler_weber")#headshot
+  section.container#contact
+    h1 Contact
+    .container
+      p Email: 
+        a(href="mailto:tylerweber@live.com") tylerweber[at]live[.]com
 
 append scripts
   script(src='/javascripts/script.js')
