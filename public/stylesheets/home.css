@@ -317,7 +317,7 @@ input:focus {
 
   #headshot {
     max-width: 75%;
-    max-height: 50%;
+    height: 50%;
   }
 
   .form-item label {
