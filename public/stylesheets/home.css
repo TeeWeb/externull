@@ -270,8 +270,7 @@ input:focus {
   }
 
   #headshot {
-    max-width: 25%;
-    display: block;
+    max-width: 50%;
   }
 }
 
